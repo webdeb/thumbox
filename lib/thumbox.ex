@@ -4,15 +4,12 @@ defmodule Thumbox do
   """
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Thumbox.hello
-      :world
+  Signs a string like its done by thumbor
+  See: http://thumbor.readthedocs.io/en/latest/libraries.html#library-tests-scenarios
 
   """
-  def hello do
-    :world
+  def sign(key, str) do
+    :crypto.hmac(:sha, key, str)
+    |> Base.url_encode64()
   end
 end

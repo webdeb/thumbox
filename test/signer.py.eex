@@ -1,0 +1,3 @@
+from thumbor.crypto import Signer;
+signer = Signer("<%= key %>");
+print signer.signature("<%= str %>");
