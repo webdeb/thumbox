@@ -10,7 +10,15 @@ use Mix.Config
 
 # You can configure your application as:
 #
-#     config :thumbox, key: :value
+config :thumbox,
+  server: "http://thumbor.example.com/",
+  secret: "secret",
+  imageTypes: %{
+    smallThumb: "300x300/smart/",
+    miniThumb: "50x50/smart/",
+    original: ""
+  }
+
 #
 # and access this configuration in your application as:
 #
