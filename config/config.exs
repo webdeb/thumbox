@@ -11,12 +11,13 @@ use Mix.Config
 # You can configure your application as:
 #
 config :thumbox,
-  server: "http://thumbor.example.com/",
+  server: "https://thumbor.example.com",
+  # or just 'app' if thumbor can access it in the network
+  origin: "my-app.com:4000",
   secret: "secret",
   imageTypes: %{
-    smallThumb: "300x300/smart/",
-    miniThumb: "50x50/smart/",
-    original: ""
+    big: "300x300/smart",
+    small: "50x50/smart"
   }
 
 #
