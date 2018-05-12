@@ -1,11 +1,13 @@
 defmodule Thumbox do
   @moduledoc """
   Documentation for Thumbox.
+
+  configure
   """
 
-  def get_image_url(type, path) do
-    {server, origin, secret, imageTypes} = get_config()
-    resource = "#{imageTypes[type]}/#{origin}/#{path}"
+  def get_image_url(type, path, opts \\ []) do
+    {server, origin, secret, types} = get_config(opts)
+    resource = "#{types[type]}/#{origin}/#{path}"
     signature = sign(secret, resource)
 
     "#{server}/#{signature}/#{resource}"
@@ -20,12 +22,12 @@ defmodule Thumbox do
     |> Base.url_encode64()
   end
 
-  defp get_config() do
-    server = Application.get_env(:thumbox, :server)
-    origin = Application.get_env(:thumbox, :origin)
-    secret = Application.get_env(:thumbox, :secret)
-    imageTypes = Application.get_env(:thumbox, :imageTypes)
-
-    {server, origin, secret, imageTypes}
+  defp get_config(opts) do
+    {
+      opts[:server] || Application.get_env(:thumbox, :server),
+      opts[:origin] || Application.get_env(:thumbox, :origin),
+      opts[:secret] || Application.get_env(:thumbox, :secret),
+      opts[:types] || Application.get_env(:thumbox, :types)
+    }
   end
 end

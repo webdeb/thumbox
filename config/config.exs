@@ -15,7 +15,7 @@ config :thumbox,
   # or just 'app' if thumbor can access it in the network
   origin: "my-app.com:4000",
   secret: "secret",
-  imageTypes: %{
+  types: %{
     big: "300x300/smart",
     small: "50x50/smart"
   }
