@@ -5,7 +5,7 @@ defmodule Thumbox do
   configure
   """
 
-  def get_image_url(type, path, opts \\ []) do
+  def gen_url(type, path, opts \\ []) do
     {server, origin, secret, types} = get_config(opts)
     resource = "#{types[type]}/#{origin}/#{path}"
     signature = sign(secret, resource)

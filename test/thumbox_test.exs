@@ -13,7 +13,7 @@ defmodule ThumboxTest do
   end
 
   test "url generation" do
-    assert Thumbox.get_image_url(:big, "uploads/my.img") ==
+    assert Thumbox.gen_url(:big, "uploads/my.img") ==
              "https://thumbor.example.com/BoD6rpx-wqlK4WxYV_D1c1iacd4=/300x300/smart/my-app.com:4000/uploads/my.img"
   end
 
