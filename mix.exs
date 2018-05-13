@@ -9,9 +9,22 @@ defmodule Thumbox.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       name: "Thumbox",
+      description: "Thumbor URL generator helper for elixir",
       source_url: "https://github.com/webdeb/thumbox",
-      # The main page in the docs
+      package: package(),
       docs: [main: "Thumbox", extras: ["README.md"]]
+    ]
+  end
+
+  defp package() do
+    [
+      # This option is only needed when you don't want to use the OTP application name
+      name: "thumbox",
+      # These are the default files included in the package
+      files: ["lib", "mix.exs", "README*", "LICENSE"],
+      maintainers: ["Boris Kotov"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/webdeb/thumbox"}
     ]
   end
 

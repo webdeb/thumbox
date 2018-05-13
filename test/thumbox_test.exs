@@ -1,5 +1,6 @@
 defmodule ThumboxTest do
   use ExUnit.Case, async: true
+  doctest Thumbox
   use ExUnitProperties
 
   property "compare generation of thumbor and thumbox hmac of a simple string" do
