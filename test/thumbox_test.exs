@@ -21,7 +21,7 @@ defmodule ThumboxTest do
   # Helper function, thumbor and python must be installed locally to run
   defp sign_in_thumbor(key, str) do
     script = EEx.eval_file("test/signer.py.eex", key: key, str: str)
-    {<<signature::binary-size(28), "\n">>, _} = System.cmd("python2.7", ["-c", script])
+    {<<signature::binary-size(28), "\n">>, _} = System.cmd("python", ["-c", script])
 
     signature
   end
