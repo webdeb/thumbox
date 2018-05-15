@@ -1,4 +1,6 @@
 language: elixir
 elixir: '1.6'
 before_install:
- - pip install thumbor
+ - git clone git://github.com/thumbor/thumbor.git
+ - cd thumbor
+ - python setup.py install
