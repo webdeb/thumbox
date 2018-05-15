@@ -3,4 +3,4 @@ language: elixir
 elixir: '1.6'
 install:
   - pip install --user --upgrade pip
-  - pip install thumbor
+  - python -m pip install --user thumbor
