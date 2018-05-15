@@ -1,5 +1,5 @@
+sudo: true
 language: elixir
 elixir: '1.6'
 install:
- - pip install --user -U pip
- - pip install --user thumbor
+ - pip install thumbor
