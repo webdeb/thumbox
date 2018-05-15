@@ -2,4 +2,5 @@ sudo: true
 language: elixir
 elixir: '1.6'
 install:
- - pip install thumbor
+  - pip install --upgrade pip
+  - pip install thumbor
