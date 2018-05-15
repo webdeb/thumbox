@@ -41,7 +41,7 @@ _Note_: The origin option can also be an internal hostname, like "app"
 
 ```elixir
 Thumbox.gen_url(:profile_avatar, "uploads/some-user-avatar.jpg")
-=> "https://thumbox.example.com/<hmac-signature>/200x200/smart/my-app.com/uploads/some-user-avatar.jpg"
+=> "https://thumbor.example.com/<hmac-signature>/200x200/smart/my-app.com/uploads/some-user-avatar.jpg"
 ```
 
 opts: You can also pass any option from the config to the url generation on the fly.
