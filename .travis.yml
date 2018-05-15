@@ -4,3 +4,4 @@ elixir: '1.6'
 install:
   - pip install --user --upgrade pip
   - python -m pip install --user thumbor
+  - mix local.hex --force
