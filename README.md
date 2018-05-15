@@ -1,5 +1,7 @@
 # Thumbox
 
+[![Build Status](https://travis-ci.org/webdeb/thumbox.svg?branch=master)](https://travis-ci.org/webdeb/thumbox)
+
 ## Installation
 
 [available in Hex](https://hex.pm/thumbox), the package can be installed
