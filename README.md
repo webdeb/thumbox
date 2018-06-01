@@ -3,6 +3,8 @@
 Generate secure [thumbor](http://thumbor.org) urls on the fly.
 
 [![Build Status](https://travis-ci.org/webdeb/thumbox.svg?branch=master)](https://travis-ci.org/webdeb/thumbox)
+[![HitCount](http://hits.dwyl.io/webdeb/thumbox.svg)](http://hits.dwyl.io/webdeb/thumbox)
+
 
 #### The signature generation is tested against the original thumbor implemention.
 
@@ -37,14 +39,14 @@ _Note_: The origin option can also be an internal hostname, like "app"
 
 ## Usage
 
-### gen_url(type, path, opts \\ [])
+### gen_url(type, path, opts \\\ [])
 
 ```elixir
 Thumbox.gen_url(:profile_avatar, "uploads/some-user-avatar.jpg")
 => "https://thumbor.example.com/<hmac-signature>/200x200/smart/my-app.com/uploads/some-user-avatar.jpg"
 ```
 
-opts: You can also pass any option from the config to the url generation on the fly.
+*opts: You can also pass any option from the config to the url generation on the fly.*
 
 ## License
 
