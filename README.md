@@ -1,17 +1,21 @@
 # Thumbox
 
-Generate secure [thumbor](http://thumbor.org) urls on the fly.
+Generate secure [thumbor](http://thumbor.org) URLs on the fly.
 
 [![Build Status](https://travis-ci.org/webdeb/thumbox.svg?branch=master)](https://travis-ci.org/webdeb/thumbox)
-[![HitCount](http://hits.dwyl.io/webdeb/thumbox.svg)](http://hits.dwyl.io/webdeb/thumbox)
+[![Module Version](https://img.shields.io/hexpm/v/thumbox.svg)](https://hex.pm/packages/thumbox)
+[![Hex Docs](https://img.shields.io/badge/hex-docs-lightgreen.svg)](https://hexdocs.pm/thumbox/)
+[![Total Download](https://img.shields.io/hexpm/dt/thumbox.svg)](https://hex.pm/packages/thumbox)
+[![License](https://img.shields.io/hexpm/l/thumbox.svg)](https://github.com/webdeb/thumbox/blob/master/LICENSE)
+[![Last Updated](https://img.shields.io/github/last-commit/webdeb/thumbox.svg)](https://github.com/webdeb/thumbox/commits/master)
 
 
-#### The signature generation is tested against the original thumbor implemention.
+#### The signature generation is tested against the original thumbor implementation.
 
 ## Installation
 
-[available in Hex](https://hex.pm/packages/thumbox), the package can be installed
-by adding `thumbox` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `:thumbox` to your list of dependencies
+in `mix.exs`:
 
 ```elixir
 def deps do
@@ -48,6 +52,9 @@ Thumbox.gen_url(:profile_avatar, "uploads/some-user-avatar.jpg")
 
 *opts: You can also pass any option from the config to the url generation on the fly.*
 
-## License
+## Copyright and License
 
-MIT
+Copyright (c) 2018 Boris Kotov
+
+This work is free. You can redistribute it and/or modify it under the
+terms of the MIT License. See the [LICENSE.md](./LICENSE.md) file for more details.
